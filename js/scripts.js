@@ -1,39 +1,39 @@
 // Utility Logic
 
-function noInputtedWord(word, text) {
-  return ((text.trim().length === 0) || (word.trim().length === 0));
+function noInputtedNumber(number, text) {
+  return ((text.trim().length === 0) || (number.trim().length === 0));
 }
 
 // Business Logic
 
 
-function wordCounter(text) {
-  if (text.trim().length === 0) {
+function beepBoop(text) {
+  if (number.trim().length === 0) {
     return 0;
   }
-  let wordCount = 0;
-  const wordArray = text.split(" ");
-  wordArray.forEach(function(element) {
+  let numberCount = 0;
+  const numberArray = text.split(" ");
+  numberArray.forEach(function(element) {
     if (!Number(element)) {
-    wordCount++;
+    numberCount++;
     }
   });
-  return wordCount;
+  return numberCount;
 }
 
 
-function numberOfOccurrencesInText(word, text) {
-  if (noInputtedWord(word, text)) {
+function numberOfOccurrencesInText(number, text) {
+  if (noInputtedNumber(number, text)) {
     return 0;
   }
-  const wordArray = text.split(" ");
-  let wordCount = 0;
-  wordArray.forEach(function(element) {
+  const numberArray = text.split(" ");
+  let numberCount = 0;
+  numberArray.forEach(function(element) {
     if (element.toLowerCase().includes(word.toLowerCase())) {
-      wordCount++
+      numberCount++
     }
   });
-  return wordCount;
+  return numberCount;
 }
 
 // UI Logic
@@ -56,14 +56,14 @@ function boldPassage(word, text) {
 
 
 $(document).ready(function(){
-  $("form#word-counter").submit(function(event){
+  $("form#number-counter").submit(function(event){
     event.preventDefault();
     const passage = $("#text-passage").val();
-    const word = $("#word").val();
-    const wordCount = wordCounter(passage);
-    const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
-    $("#total-count").html(wordCount);
-    $("#selected-count").html(occurrencesOfWord);
-    $("#bolded-passage").html(boldPassage(word, passage));
+    const number = $("#number").val();
+    const numberCount = numberCounter(passage);
+    const occurrencesOfNumber = numberOfOccurrencesInText(number, passage);
+    $("#special-message").html(numberCount);
+    $("#selected-count").html(occurrencesOfNumber);
+    $("#bolded-passage").html(boldPassage(number, passage));
   });
 });
