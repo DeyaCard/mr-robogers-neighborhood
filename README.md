@@ -1,5 +1,7 @@
 # Mr. Roboger's Neighborhood
 
+A web application that transforms user inputted numbers into special worded messages. This is an exercise using arrays and looping.
+
 ## By: Deya Card
 
 ### Technologies used:
@@ -11,6 +13,7 @@
 ### Setup/Installation Requirements:
 
 * Clone or download this repository onto your desktop
+https://github.com/DeyaCard/mr-robogers-neighborhood
 * Navigate to top-level of directory
 * Open index.html in the browser of your choice
 
