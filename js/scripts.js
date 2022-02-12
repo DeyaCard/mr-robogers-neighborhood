@@ -17,6 +17,7 @@ function mrRobogers(number) {
   }
   return numberArr;  
 }
+console.log
    
 
 
@@ -25,8 +26,8 @@ function mrRobogers(number) {
 $(document).ready(function() {
   $("form#number-counter").submit(function() {
     event.preventDefault();
-    const passage = $("#text-passage").val();
+    const passage = $("#number-passage").val();
     const number = $("#number").val();
-    $("#special-message").html(numberCount);
+    $(".special-message").text(number);
   });
 });
