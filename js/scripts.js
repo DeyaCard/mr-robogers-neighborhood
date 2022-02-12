@@ -5,6 +5,18 @@ function mrRobogers(number) {
   let numberArr = []
 
   for (let i = 0; i <= number; i++) {
+    if (i.toString().includes("3")) {
+      numberArr.push("Won't you be my neighbor?");
+    } else if (i.toString().includes("2")) {
+      numberArr.push("Boop!");
+    } else if (i.toString().includes("1")) {
+      numberArr.push("Beep!");
+    } else {
+      numberArr.push(i);
+    }
+  }
+  return numberArr;  
+}
    
 
 
