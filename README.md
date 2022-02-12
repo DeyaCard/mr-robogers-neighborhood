@@ -23,26 +23,25 @@ https://github.com/DeyaCard/mr-robogers-neighborhood
 
 #### Describe: mrRobogers()
 
+Test: "It should return a string of user entered numbers beginning with 0."
+Code: mrRobogers(6);
+Expected Output: [0,1,2,3,4,5,6]
+
 Test: "It should replace all numbers that contain a 3 with "Won't you be my neighbor?"."
 Code: mrRobogers(324);
 Expected Output: ["Won't you be my neighbor?"]
 
-Test: 
-Code:
-Expected Output:
-
-Test:
-Code:
-Expected Output:
+Test: "It should replace all numbers that contain a 2 with "Boop!"."
+Code: mrRobogers(92)
+Expected Output: ["Boop!"]
 
 Test: "It should replace all numbers that contain a 1 with "Beep!"."
-Code: beepBoop(124);
+Code: mrRobogers(124);
 Expected Output: ["Beep!"]
 
-
-
-
-
+Test: "It whould follow the hierarchy of substitutions."
+Code: mrRobogers(1,2,3)
+Expected Output: [3,2,1]
 
 
 

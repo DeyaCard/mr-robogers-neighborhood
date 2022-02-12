@@ -28,6 +28,7 @@ $(document).ready(function() {
     event.preventDefault();
     const passage = $("#number-passage").val();
     const number = $("#number").val();
+    
     $(".special-message").text(number);
   });
 });
