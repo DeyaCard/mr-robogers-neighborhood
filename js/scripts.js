@@ -13,6 +13,7 @@ function mrRobogers(number) {
       numberArr.push("Beep!");
     } else {
       numberArr.push(i);
+      console.log
     }
   }
   return numberArr;  
@@ -26,9 +27,9 @@ function mrRobogers(number) {
 $(document).ready(function() {
   $("form#number-counter").submit(function() {
     event.preventDefault();
-    const passage = $("#number-passage").val();
-    const number = $("#number").val();
+    const numInput = parseInt($("#number-passage").val());
+    
 
-    $(".special-message").text(number);
+    $(".special-message").text(numInput);
   });
 });
