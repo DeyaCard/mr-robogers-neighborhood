@@ -8,7 +8,6 @@ function mrRobogers(number) {
    
 
 
-
 // UI Logic
 
 $(document).ready(function() {
