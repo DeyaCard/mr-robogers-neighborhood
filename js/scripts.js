@@ -5,15 +5,14 @@ function mrRobogers(number) {
   let numberArr = []
 
   for (let index = 0; index <= number; index++) {
-    if (index.mrString().includes("3")) {
+    if (index.toString().includes("3")) {
       numberArr.push("Won't you be my neighbor?");
-    } else if (index.mrString().includes("2")) {
+    } else if (index.toString().includes("2")) {
       numberArr.push("Boop!");
-    } else if (index.mrString().includes("1")) {
+    } else if (index.toString().includes("1")) {
       numberArr.push("Beep!");
     } else {
-      numberArr.push(i);
-      console.log(numberArr);
+      numberArr.push(index);
     }
   }
   return numberArr;  
@@ -25,12 +24,12 @@ function mrRobogers(number) {
 // UI Logic
 
 $(document).ready(function() {
-  $("form#number-counter").submit(function() {
+  $("form#number-counter").submit(function(event) {
     event.preventDefault();
-    const number = parseInt($("#number-passage").val());
-    const numberArr = mrRobogers(numberArr)
-    
+    const number = ($("#number-passage").val());
+    const numberArr = mrRobogers(number)
+    console.log(numberArr);
     $("#mrRoboger-Output").html(numberArr);
-    $(".special-message").text(numInput);
+    $("#special-message").text(numberArr);
   });
 });
