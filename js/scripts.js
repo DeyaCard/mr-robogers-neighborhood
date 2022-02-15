@@ -13,7 +13,7 @@ function mrRobogers(number) {
       numberArr.push("Beep!");
     } else {
       numberArr.push(i);
-      console.log(mrRobogers);
+      console.log(numberArr);
     }
   }
   return numberArr;  
