@@ -4,16 +4,16 @@
 function mrRobogers(number) {
   let numberArr = []
 
-  for (let i = 0; i <= number; i++) {
-    if (i.mrString().includes("3")) {
+  for (let index = 0; index <= number; index++) {
+    if (index.mrString().includes("3")) {
       numberArr.push("Won't you be my neighbor?");
-    } else if (i.mrString().includes("2")) {
+    } else if (index.mrString().includes("2")) {
       numberArr.push("Boop!");
-    } else if (i.mrString().includes("1")) {
+    } else if (index.mrString().includes("1")) {
       numberArr.push("Beep!");
     } else {
       numberArr.push(i);
-      console.log
+      console.log(mrRobogers);
     }
   }
   return numberArr;  
@@ -27,9 +27,10 @@ function mrRobogers(number) {
 $(document).ready(function() {
   $("form#number-counter").submit(function() {
     event.preventDefault();
-    const numInput = parseInt($("#number-passage").val());
+    const number = parseInt($("#number-passage").val());
+    const numberArr = mrRobogers(numberArr)
     
-
+    $("#mrRoboger-Output").html(numberArr);
     $(".special-message").text(numInput);
   });
 });

@@ -8,7 +8,8 @@ A web application that transforms user inputted numbers into special worded mess
 
 * JavaScript
 * HTML/CSS
-* 
+* jQuery
+* Bootstrap
 
 ### Setup/Installation Requirements:
 
@@ -40,8 +41,8 @@ Code: mrRobogers(124);
 Expected Output: ["Beep!"]
 
 Test: "It whould follow the hierarchy of substitutions."
-Code: mrRobogers(1,2,3)
-Expected Output: [3,2,1]
+Code: mrRobogers(123)
+Expected Output: ["Won't you be my neighbor?"]
 
 
 
